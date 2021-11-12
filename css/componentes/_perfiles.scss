@@ -3,6 +3,7 @@
   padding-top: 50px;
   color: $Color-claro;
   background-color: $Color-secundario;
+  @include modo-oscuro;
 
   &__avatar {
   display: block;

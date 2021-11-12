@@ -5,7 +5,44 @@ $Color-primario: #333333;
 $Color-claro: #FFFFFF;
 $Color-secundario: #8841DA;
 $Color-variacion: #3f579a;
+/** DARK MODE**/
+$dark-mode: true;
+
 /*mixins*/
+/* mixin dark-mode */
+@mixin modo-oscuro {
+  @if $dark-mode == true {
+    color: $Color-secundario;
+    background-color: $Color-claro;
+    &__titulo {
+      color: get-opacity($Color-secundario, 0.5);
+    }
+    &__boton {
+      background-color: $Color-primario;
+    }
+  } @else {
+    color: $Color-claro;
+    background-color: $Color-secundario;
+    &__titulo {
+    color: get-opacity($Color-claro, -1.5);
+    }
+    &__boton {
+    background-color: get-opacity($Color-primario, -1.2);
+    border: 1px solid get-opacity($Color-claro, 0.5);
+    }
+  }
+}
+
+@mixin articulo-mod {
+  @if $dark-mode == true {
+    background-color: $Color-primario;
+    color: $Color-claro;
+  } @else {
+    background-color: $Color-claro;
+    color: $Color-primario;
+  }
+}
+
 @mixin caja {
   border-radius: 20px;
   box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.50);

@@ -1,5 +1,7 @@
 /*VARIABLES*/
+/** DARK MODE**/
 /*mixins*/
+/* mixin dark-mode */
 /*FUNCIONES*/
 /*CONDICIONALS_AND_LOOPS*/
 h1 {
@@ -41,6 +43,14 @@ main {
   padding-top: 50px;
   color: #FFFFFF;
   background-color: #8841DA;
+  color: #8841DA;
+  background-color: #FFFFFF;
+}
+.perfil__titulo, .perfil__minibio h3 {
+  color: rgba(136, 65, 218, 0.5);
+}
+.perfil__boton {
+  background-color: #333333;
 }
 .perfil__avatar {
   display: block;
@@ -179,6 +189,8 @@ main {
 .articulos {
   width: 40%;
   padding: 50px 0 0 50px;
+  background-color: #333333;
+  color: #FFFFFF;
 }
 
 .articulo {
